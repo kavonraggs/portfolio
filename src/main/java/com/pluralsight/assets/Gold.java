@@ -13,5 +13,13 @@ public class Gold extends FixedAsset{
         return weight;
     }
 
+    @Override
+    public double getValue() {
+        return super.getValue();
+    }
 
+    @Override
+    public String toString() {
+        return String.format("Gold [%s: %.2f oz |  Value: %.2f]", getName(), weight, getValue());
+    }
 }

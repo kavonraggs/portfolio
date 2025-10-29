@@ -1,6 +1,6 @@
 package com.pluralsight.assets;
 
-public interface Valuable {
+public interface Valuable extends Comparable<Valuable> {
 
     public double getValue();
 

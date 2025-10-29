@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Portfolio implements Comparable<Valuable>{
+import static java.util.Collections.max;
+
+public class Portfolio {
     private String name;
     private String owner;
     private List<Valuable> assets = new ArrayList<>();
@@ -31,14 +33,17 @@ public class Portfolio implements Comparable<Valuable>{
     }
 
     public Valuable getMostValuable(){
-        Valuable mostValuable = Collections.max(assets);
-        return
-
-
+        if (!assets.isEmpty()) {
+            return Collections.max(assets);
+        }
+        return null;
     }
 
     public Valuable getLeastValuable(){
-
+        if (!assets.isEmpty()){
+            return Collections.min(assets);
+        }
+        return null;
     }
 
 
