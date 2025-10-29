@@ -16,7 +16,7 @@ public class FinanceApplication {
     public static void main(String[] args) {
         FinanceApplication application = new FinanceApplication();
 
-        Portfolio portfolio = new Portfolio("My Portfolio", application.getInput("What is your name?"));
+        Portfolio portfolio = new Portfolio("My Portfolio", application.getInput(scanner,"What is your name?"));
 
         while (true)
         {
