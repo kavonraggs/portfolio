@@ -23,6 +23,7 @@ public class BankAccount implements Valuable, Comparable<Valuable> {
 
     @Override
     public double getValue(){
+        return balance;
 
     }
 
