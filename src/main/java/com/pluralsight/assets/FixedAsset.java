@@ -13,7 +13,6 @@ public abstract class FixedAsset implements Valuable, Comparable<Valuable> {
     @Override
     public double getValue(){
         return getMarketValue();
-
     }
 
     public String getName() {

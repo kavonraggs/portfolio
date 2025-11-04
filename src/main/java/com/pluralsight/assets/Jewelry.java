@@ -10,7 +10,7 @@ public class Jewelry extends FixedAsset {
 
     @Override
     public double getValue(){
-
+        return super.getValue();
     }
 
 }

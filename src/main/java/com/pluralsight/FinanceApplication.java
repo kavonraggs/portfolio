@@ -16,7 +16,7 @@ public class FinanceApplication {
     public static void main(String[] args) {
         FinanceApplication application = new FinanceApplication();
 
-        Portfolio portfolio = new Portfolio("My Portfolio", application.getInput(scanner,"What is your name?"));
+        Portfolio portfolio = new Portfolio("My Portfolio", application.getInput(scanner,"What is your name? "));
 
         while (true)
         {
@@ -40,6 +40,12 @@ public class FinanceApplication {
                     application.addCreditCard(portfolio);
                     break;
                 case "6":
+                    System.out.println(portfolio.getLeastValuable());;
+                    break;
+                case "7":
+                    System.out.println(portfolio.getMostValuable());;
+                    break;
+                case "8":
                     System.out.println("Goodbye!");
                     return;
                 default:
@@ -49,7 +55,7 @@ public class FinanceApplication {
     }
 
     private void addCreditCard(Portfolio portfolio) {
-        String name = getInput(scanner, "Name: ");
+        String name = getInput(scanner, "Institution Name: ");
         String accountNumber = getInput(scanner,"Account Number: ");
         double balance = Double.parseDouble(getInput(scanner,"Balance: "));
 
@@ -59,7 +65,7 @@ public class FinanceApplication {
     }
 
     private void addBankAccount(Portfolio portfolio) {
-        String name = getInput(scanner,"Name: ");
+        String name = getInput(scanner,"Institution Name: ");
         String accountNumber = getInput(scanner,"Account Number: ");
         double balance = Double.parseDouble(getInput(scanner,"Balance: "));
 
@@ -70,7 +76,7 @@ public class FinanceApplication {
     }
 
     private void addJewelry(Portfolio portfolio) {
-        String name = getInput(scanner,"Name: ");
+        String name = getInput(scanner,"Item Type: ");
         double value = Double.parseDouble(getInput(scanner,"Value: "));
         double karats = Double.parseDouble(getInput(scanner,"Karats: "));
 
@@ -80,7 +86,7 @@ public class FinanceApplication {
     }
 
     private void addGold(Portfolio portfolio) {
-        String name = getInput(scanner,"Name: ");
+        String name = getInput(scanner,"Item Type: ");
         double value = Double.parseDouble(getInput(scanner,"Value: "));
         double weight = Double.parseDouble(getInput(scanner,"Weight: "));
 
@@ -90,8 +96,8 @@ public class FinanceApplication {
     }
 
     private void addHouse(Portfolio portfolio) {
-        String name = getInput(scanner, "Name: ");
-        double value = Double.parseDouble(getInput(scanner,"Value: "));
+        String name = getInput(scanner, "Property Name: ");
+        double value = Double.parseDouble(getInput(scanner,"Property Value: "));
         int yearBuilt = Integer.parseInt(getInput(scanner,"Year Built: "));
         int squareFeet = Integer.parseInt(getInput(scanner,"Square feet: "));
         int bedrooms = Integer.parseInt(getInput(scanner,"Bedrooms: "));
@@ -104,13 +110,15 @@ public class FinanceApplication {
 
     public void displayMenu(){
         String menu =  """
-                Select Asset Type:
-                1) House
-                2) Gold
-                3) Jewelry
-                4) Bank Account
-                5) Credit Card
-                6) Exit
+                Select from the following menu:
+                1) Add House
+                2) Add Gold
+                3) Add Jewelry
+                4) Add Bank Account
+                5) Add Credit Card
+                6) View least valuable asset
+                7) View most valuable asset
+                8) Exit
                 """;
 
 

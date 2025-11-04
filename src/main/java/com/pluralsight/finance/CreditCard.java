@@ -23,7 +23,6 @@ public class CreditCard implements Valuable, Comparable<Valuable> {
 
     public double getValue(){
         return -balance;
-
     }
 
     @Override

@@ -17,7 +17,7 @@ public class House extends FixedAsset {
 
     @Override
     public double getValue(){
-
+        return this.squareFeet * 200;
     }
 
 }
