@@ -30,4 +30,12 @@ public class BankAccount implements Valuable, Comparable<Valuable> {
     public int compareTo(Valuable o) {
         return Double.compare(this.getValue(), o.getValue());
     }
+
+    @Override
+    public String toString() {
+        return "Bank Account" +
+                "\nBank name: " + name +
+                "\nAccount Number: " + accountNumber +
+                "\nBalance: " + balance;
+    }
 }

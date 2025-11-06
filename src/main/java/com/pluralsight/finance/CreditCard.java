@@ -29,4 +29,12 @@ public class CreditCard implements Valuable, Comparable<Valuable> {
     public int compareTo(Valuable o) {
         return Double.compare(this.getValue(), o.getValue());
     }
+
+    @Override
+    public String toString() {
+        return "Credit Card Account" +
+                "\nBank name: " + name +
+                "\nAccount Number: " + accountNumber +
+                "\nBalance: " + balance;
+    }
 }
